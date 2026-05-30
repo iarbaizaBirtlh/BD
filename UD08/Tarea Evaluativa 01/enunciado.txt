@@ -1,0 +1,25 @@
+Enunciado
+1. Crea la tabla RUTAS con los campos que se indican a continuación. El campo multivaluado puntos_interes será un campo de tipo colección.
+
+ID	Nombre	Descripción	Tipo	Dificultad	Duración	Puntos de interés
+1	Ruta del hayedo	Recorrido circular entre bosque, cascada y miradores	Montaña	Media	180	Hayedo, Cascada, Mirador Norte, Ermita
+2	Paseo marítimo histórico	Ruta urbana junto al mar y el casco antiguo	Urbana	Baja	60	Puerto, Faro, Plaza Mayor, Murallas
+1.1. Crea el tipo de dato necesario.
+
+1.2. Crea la tabla.
+
+1.3. Inserta los datos.
+
+1.4. Comprueba con una SELECT que has introducido los datos correctamente.
+
+1.5. Consulta con una SELECT y la función TABLE los puntos de interés de la Ruta del hayedo. Debe aparecer un punto de interés por fila.
+
+1.6. Para finalizar, añade un nuevo punto de interés al Paseo marítimo histórico, utilizando MULTISET UNION.
+
+UTILIZANDO EL ESQUEMA CINE:
+
+2. Crea un bloque anónimo con un ARRAY ASOCIATIVO de tipo %ROWTYPE de la tabla TECNICO con índice de tipo PLS_INTEGER. En el array introduciremos, mediante un cursor, los datos de los técnicos cuyo número de años de experiencia NO está entre 5 y 10. Para finalizar, recorre y muestra los valores nif_tecnico y anios_experiencia del array usando DBMS_OUTPUT. No usar BULK COLLECT.
+
+3. Crea un bloque anónimo con un VARRAY que haga lo mismo que el punto anterior, pero usando BULK COLLECT y DBMS_OUTPUT.
+
+4. Crea un bloque anónimo con tablas anidadas que haga lo mismo que el punto anterior, usando BULK COLLECT y DBMS_OUTPUT.

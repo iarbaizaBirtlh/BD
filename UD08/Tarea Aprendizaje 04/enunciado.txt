@@ -1,0 +1,37 @@
+Enunciado
+VARRAYS
+
+Utilizaremos el esquema HR para los ejercicios del número 3 en adelante.
+
+1. En un bloque anónimo, crea una nested table que tenga los siguientes valores y visualízalos mediante un bucle FOR.
+
+Clave      Valor
+1            INFORMATICA
+2            MATEMATICAS
+3            BIOLOGIA
+4            LITERATURA
+
+2. Incluye las asignaturas FÍSICA e HISTORIA extendiendo la NESTED TABLE.. Vuelve a visualizarlo  con un bucle FOR.
+
+3. Crea un NESTED_TABLE a nivel de Base de datos, llamada NESTED_EMPLE que tenga como tipo un VARCHAR2(100).
+
+4. Crea una función llamada NESTED1 que tenga como parámetro un NUMBER, en concreto el departamento de los empleados. Debe devolver una NESTED_TABLE de tipo NESTED_EMPLE (que hemos creado en el punto anterior) con el FIRST_NAME, LAST_NAME y SALARY concatenados.
+
+5. Invoca esa función desde un bloque PL/SQL anónimo y visualiza los datos obtenidos. Por ejemplo, del departamento 30.
+
+6. Crea una tabla de Base de datos denominada DEPARTAMENTOS1 que tenga la siguiente estructura. A la table auxiliar que debe tener la NESTED TABLE la llamanos NESTED_DATOS
+
+Columna       Tipo
+CODIGO         NUMBER
+FECHA_ALTA   DATE
+DATOS           NESTED_EMPLE(La nested table creada anteriormente)
+
+7. Crea un bloque anónimo, que usando la función NESTED1 que hemos creado en un punto anterior cargue la tabla DEPARTAMENTOS1 con los datos de los empleados de cada departamento.
+         Por cada departamento de la table DEPARTMENTS inserta en la tabla DEPARTAMENTOS1 una fila con los siguientes datos:
+         CODIGO → DEPARTMENT_ID
+         FECHA_ALTA → La fecha de hoy
+         DATOS →la NESTED_TABLE recuperada de la función NESTED1 que contiene los datos de los empleados de ese departamento.
+
+8. Visualizamos el resultado de la tabla.
+
+9. Hacemos lo mismo pero en esta ocasión con la función TABLE, por ejemplo para el departamento 30

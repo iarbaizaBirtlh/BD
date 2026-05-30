@@ -1,0 +1,45 @@
+Enunciado
+VARRAYS
+
+Utilizaremos el esquema HR para los ejercicios del número 3 en adelante.
+
+1. En un bloque anónimo, crea un varray de 10 posiciones que tenga los siguientes valores y visualizalos mediante un bucle FOR.
+
+Clave      Valor
+1            INFORMATICA
+2            MATEMATICAS
+3            BIOLOGIA
+4            LITERATURA
+
+2. Extiende el VARRAY anterior para que se incluyan las asignaturas FÍSICA e HISTORIA. Vuelve a visualizarlo  con un bucle FOR.
+
+3. Crea un procedimiento que tenga como parámetro un NUMBER, en concreto el salario de los empleados:
+         Crea un VARRAY de 1000 posiciones para almacenar los empleados
+         Mediante un BULK COLLECT carga los empleados que ganen más que el salario que se ha pasado al procedimiento
+         Visualiza el número de empleados cargado
+         Visualiza los empleados
+
+4. Crea un VARRAY a nivel de Base de datos que se denomine NOMBRES, con un tamaño de 200 y de tipo VARCHAR2(100)
+         Utilízalo dentro de un bloque PL/SQL anónimo para cargar los nombres y apellidos de los empleados.
+         Visualiza el varray
+
+5. Crea una tabla de Base de datos denominada DEPARTAMENTOS que tenga la siguiente estructura:
+
+Columna       Tipo
+CODIGO         NUMBER
+FECHA_ALTA   DATE
+DATOS           NOMBRES (El varray creado en el ejercicio anterior)
+
+6. Crea un procedimiento denominado CARGA_DEPARTAMENTOS que hará lo siguiente:
+         Por cada departamento de la table DEPARTMENTS insertamos en la tabla DEPARTAMENTOS una fila con los siguientes datos:
+         CODIGO → DEPARTMENT_ID
+         FECHA_ALTA → La fecha de hoy
+         DATOS → El FIRST_NAME, LAST_NAME concatenado de todos los empleados de ese departamento
+
+7. Ejecuta el procedimiento anterior
+
+8. Una vez cargados los datos lo visualizamos, en primer lugar al completo.
+
+9. Visualizamos los datos del departamento 30. Deben salir en una sola línea.
+
+10. Por último, lo visualizamos con la función TABLE, para ver los datos del departamento 30 de forma individual.

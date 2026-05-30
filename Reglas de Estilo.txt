@@ -1,0 +1,65 @@
+/*
+	- Este archivo contiene las reglas de estilo que se deben seguir para entregar las respuestas a las consultas.
+	- Asegúrate de respetar estas reglas para mantener consistencia y claridad en el código.
+
+
+	- 1. MAYÚSCULAS para palabras clave:
+   		- Todas las palabras clave de SQL deben estar en mayúsculas (ej. SELECT, FROM, WHERE).
+
+   	- 2. Sangría y tabulación:
+   		- Usa tabulación para estructurar la consulta:
+		   - Alinea las columnas seleccionadas en líneas separadas.
+		   - Alinea las condiciones de las cláusulas.
+
+	- 3. Comentarios:
+	    - Incluye comentarios 
+	    	- Multilinea: encima de tu respuesta, con el número y el enunciado de la consulta.
+	    	- Simples: para explicar partes complejas del código.
+
+	- 4. Subconsultas:
+		-Sangra y organiza las subconsultas en líneas separadas.
+
+	- 5. Orden en las cláusulas:
+		Mantén el flujo lógico de las consultas:
+		SELECT → FROM → JOIN → WHERE → GROUP BY → HAVING → ORDER BY.
+*/
+
+-- EJEMPLO
+/*
+Consulta 1: Muestra el nombre completo de los empleados (FirstName y LastName) y el total de pedidos gestionados por cada uno.
+Solo incluye empleados que han gestionado más de 20 pedidos, ordenados por el total de pedidos en orden descendente.
+*/
+
+SELECT 
+    E.FirstName + ' ' + E.LastName AS NombreCompleto, 
+    COUNT(O.OrderID) AS TotalPedidos 
+FROM 
+    Employees E
+JOIN 
+    Orders O 
+    ON E.EmployeeID = O.EmployeeID 
+GROUP BY 
+    E.FirstName, 
+    E.LastName 
+HAVING 
+    COUNT(O.OrderID) > 20 
+ORDER BY 
+    TotalPedidos DESC; 
+
+/*
+Consulta 2: Muestra los nombres de los productos (ProductName) cuyo precio (UnitPrice) es mayor al precio promedio de todos los productos.
+*/
+SELECT 
+    ProductName, 
+    UnitPrice
+FROM 
+    Products
+WHERE 
+    UnitPrice > ( -- Subconsulta: Calcula el precio promedio de todos los productos.
+        SELECT 
+            AVG(UnitPrice)
+        FROM 
+            Products
+    )
+ORDER BY 
+    UnitPrice DESC; 

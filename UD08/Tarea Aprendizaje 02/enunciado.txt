@@ -1,0 +1,30 @@
+Enunciado
+ARRAYS ASOCIATIVOS (INDEX BY TABLES)
+
+Utilizaremos el esquema HR para los ejercicios del número 2 en adelante. 
+
+1. En un bloque anónimo, crea un array asociativo que tenga los siguientes valores y visualizalos mediante un bucle FOR.
+
+Clave      Valor
+1            INFORMATICA
+2            MATEMATICAS
+3            BIOLOGIA
+4            LITERATURA
+
+2. Crea un procedimiento llamado prueba_array1 donde cargaremos en un array asociativo los datos de los empleados de la tabla employees que pertenezcan a un determinado departamento.
+         El departamento lo pasamos como argumento del procedimiento.
+         La clave será un número desde el 1 hasta el total de empleados cargados.
+         Por último visualizamos el nombre y apellidos de los empleados.
+
+3. Repite el ejercicio anterior pero esta vez utilizando los atributos del cursor (%rowcount) y los métodos de los arrays (fisrt, last)
+
+4. Crea una copia del procedimiento anterior llamada prueba_array2, pero en este caso:
+         Hacemos un BULK COLLECT a la hora de cargar los datos
+         Visualizamos también el nombre y apellido de cada empleado para comprobar que está OK. En esta ocasión deberemos usar la función COUNT para saber el tamaño del array.
+
+5. Modifica el procedimiento anterior para que visualice
+         El nombre y salario del primer empleado
+         El nombre y salario del ultimo empleado
+         Comprueba si temenos un empleado en el índice 200. Si no es así devuelve un mensaje del tipo “Empleado 200 inexistente”
+         Elimina del ARRAY los empleados que ganen más de 5000 dolares. Visualiza el número de empleados antes y después del proceso.
+         Por ultimo,visualiza el array con los empleados que han quedado. Antes de visualizar cada fila comprueba que no haya sido eliminada por el delete.

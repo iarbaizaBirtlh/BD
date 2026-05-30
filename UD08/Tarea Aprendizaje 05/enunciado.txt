@@ -1,0 +1,30 @@
+Enunciado
+COLECCIONES EN SQL (VARRAYS Y TABLAS ANIDADAS)
+
+Como hemos visto en los ejercicios anteriores, es posible crear Varrays y tablas anidadas (no arrays asociativos) a nivel de la base de datos. Cuando los creamos quedan definidos en nuestro esquema y es posible realizar cualquier acción DML sobre estas utilizando SQL. A continuación se proponen unos ejercicios sencillos: (los podremos realizar sobre cualquier esquema de nuestra BD)
+
+1. En primer lugar crea un varray llamado colec_hijos que conste de 10 valores como máximo de 30 caracteres cada uno. 
+
+2. A continuación crea la tabla EMPLEADOS con los campos que se indican y para la columna hijos utiliza el varray creado.
+
+3. Inserta los datos en la tabla mediante dos sentencias INSERT. 
+
+4. Actualiza la primera fila añadiendo un nuevo hijo a Pepe llamado Pepin.(No es posible usar MULTISET UNION en Varrays)
+
+5. Realiza una consulta a toda la tabla para comprobar que las inserciones se han realizado correctamente.
+
+6. Realiza la misma consulta utilizando la función TABLE y visualiza los hijos de manera separada.
+
+7. Para no limitar la cantidad de valores dentro del atributo multivaluado, define un tipo tabla en el que se especifica el tipo de datos de la tabla. En este caso varchar2(30).
+
+8. Al igual que en el ejemplo anterior crea ahora la tabla EMPLEADOS2 basándola en el tipo tabla_hijos.
+
+9. Realiza las inserciones necesarias. 
+
+10. Actualiza la primera fila añadiendo un nuevo hijo a Pepe llamado Pepin (utiliza MULTISET UNION)
+
+11. Elimina el hijo Pepito a Pepe (utiliza MULTISET EXCEPT)
+
+12. Realiza de nuevo una consulta a toda la tabla para comprobar que las inserciones se han realizado correctamente.
+
+13. Realiza la misma consulta utilizando la función table y visualiza los hijos de manera separada.
